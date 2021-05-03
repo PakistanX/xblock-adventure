@@ -56,6 +56,10 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
             $(".navigation-view").addClass("hide").removeClass("show")
             $('[data-type="MCQBlock"]').addClass("hide").removeClass("show")
         }
+        $("input[type=radio]").map( function() {
+            $("[data-type='HTMLBlock'] [name='"+ $(this).attr('value') + "']").hide()
+            $(this).parent().parent().removeClass("checked")
+        });
     },
 
     getData: function() {
@@ -66,6 +70,14 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
         if (selected_choice.length) {
             data['choice'] = selected_choice.val();
         };
+
+        $("input[type=radio]").map( function() {
+            $("[data-type='HTMLBlock'] [name='"+ $(this).attr('value') + "']").hide()
+            $(this).parent().parent().removeClass("checked")
+        });
+
+        $("[data-type='HTMLBlock'] [name='"+ selected_choice.val() +"']").show()
+        selected_choice.parent().parent().addClass("checked")
 
         return data;
     },
