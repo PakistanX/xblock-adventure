@@ -4,7 +4,11 @@
 * {
     box-sizing: border-box;
 }
-
+.step-content .wrapper-video .xblock-light-child {
+    max-width: 100%;
+    background: none;
+    padding: 0;
+}
 .adventure .navigation-view .navigation-back-next-buttons {
     margin: 0 auto;
     padding: 20px 40px 10px;
@@ -154,7 +158,7 @@
     padding: 20px 15px 0;
     margin: 0 !important;
 }
-.None_2_1-info .xblock-light-child {
+.step-content .None_2_1-info .xblock-light-child {
     margin: 0 auto;
     max-width: 600px;
     background: #F2F2F2;
@@ -172,6 +176,19 @@
     font-weight: 700;
     margin: 0 0 10px !important;
 }
-.adventure .step-child .html_child >strong, .adventure .step-child .html_child >p {
+.adventure .step-content .wrapper-video .step-child .html_child >strong, .adventure .step-content .wrapper-video .step-child .html_child >p {
     padding-right: 130px;
+}
+.step-content .wrapper-video {
+    position: relative;
+}
+
+.step-content .xblock-light-child {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 40px;
+    background: #F2F2F2;
+}
+.step-content .xblock-light-child p {
+    margin: 0;
 }

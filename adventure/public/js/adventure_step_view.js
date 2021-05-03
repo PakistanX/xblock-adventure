@@ -67,7 +67,7 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
           parent().
           next('.step-child').
           andSelf().
-          wrapAll("<div class='wrapper' />")
+          wrapAll("<div class='wrapper-video' />")
     },
 
     getData: function() {
