@@ -60,6 +60,14 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
             $("[data-type='HTMLBlock'] [name='"+ $(this).attr('value') + "']").hide()
             $(this).parent().parent().removeClass("checked")
         });
+
+        // wrapping video and MCQs section in order to show feedback below MCQs options
+        $("[data-type='HTMLBlock'] [name='video']").
+          parent().
+          parent().
+          next('.step-child').
+          andSelf().
+          wrapAll("<div class='wrapper' />")
     },
 
     getData: function() {

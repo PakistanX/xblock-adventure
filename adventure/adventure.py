@@ -54,7 +54,7 @@ DEFAULT_XML_CONTENT = textwrap.dedent("""\
     situation really hard on the team and impacted the client relationship:</info>
 
     <step name="first">
-      <html>
+      <html name="video">
         <strong>Watch the following video carefully</strong>
         <p>Marry wants to know your opinion</p>
             <div class="videoWrapper"><iframe src="//fast.wistia.net/embed/iframe/avk9twrrbn" 
