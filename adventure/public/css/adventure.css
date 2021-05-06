@@ -1,6 +1,9 @@
 .adventure .navigation-view {
     padding: 0 15px;
 }
+.adventure {
+    padding-bottom: 60px;
+}
 * {
     box-sizing: border-box;
 }
@@ -24,8 +27,8 @@
     text-align: center;
     padding: 0 0 10px;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    bottom: -70px;
+    right: 0;
 }
 .adventure .navigation-view .navigation-start-over {
     display: inline-block;
@@ -73,6 +76,8 @@
 
 .adventure .step-child {
     margin-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .adventure .ooyala-child {
@@ -182,12 +187,18 @@
 .step-content .wrapper-video {
     position: relative;
 }
-
+.step-content .wrapper-video .videoWrapper {
+    margin-top: 15px;
+}
 .step-content .xblock-light-child {
     margin: 0 auto;
     max-width: 600px;
     padding: 0 40px;
     background: #F2F2F2;
+    overflow: hidden;
+}
+.step-content .xblock-light-child .html_child {
+    margin-top: 15px;
 }
 .step-content .xblock-light-child p {
     margin: 0;
