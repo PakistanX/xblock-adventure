@@ -115,6 +115,8 @@
     width: 30px;
     height: 30px;
     border: 2px solid #C4C4C4;
+    z-index: 1;
+    pointer-events: none;
 }
 .adventure .choice-selector:after {
     position: absolute;
@@ -135,15 +137,45 @@
 }
 .adventure .choice-label {
     display: block;
-    padding: 20px 15px 20px 60px;
+    padding: 18px 60px 18px;
     min-height: 70px;
     font-size: 18px;
     line-height: 30px;
+    border: 2px solid transparent;
+    position: relative;
+}
+.adventure .choice-label:after {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    border-radius: 50%;
+    background: #29CB97;
+    width: 40px;
+    height: 40px;
+    content: "\f00c";
+    font: 27px/40px FontAwesome;
+    text-align: center;
+    color: white;
+    margin: -20px 0 0;
+    display: none;
 }
 .adventure .choice-label:hover {
     background: #E2E2E2;
 }
-
+.adventure .choice.correct .choice-label {
+    border-color: #29CB97;
+}
+.adventure .choice.correct .choice-label:after {
+    display: block;
+}
+.adventure .choice.incorrect .choice-label {
+    border-color: #FF7A00;
+}
+.adventure .choice.incorrect .choice-label:after {
+    background: #FF7A00;
+    content: "\f00d";
+    display: block;
+}
 .hide {
     display: none;
 }
@@ -202,4 +234,46 @@
 }
 .step-content .xblock-light-child p {
     margin: 0;
+}
+.step-content .xblock-light-child .html_child.correct, .step-content .xblock-light-child .html_child.incorrect {
+    margin: 15px -15px;
+    padding: 20px 30px;
+    background: #BFEFE0;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #2E2E2E;
+}
+.step-content .xblock-light-child .html_child.correct p, .step-content .xblock-light-child .html_child.incorrect p {
+    margin: 0;
+}
+.step-content .xblock-light-child .html_child.incorrect {
+    background: #FFD7B3;
+}
+.step-content .xblock-light-child .html_child.correct strong, .step-content .xblock-light-child .html_child.incorrect strong {
+    display: block;
+    margin: 0 0 15px;
+    color: #2E2E2E;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 5px 0 5px 55px;
+    position: relative;
+}
+.step-content .xblock-light-child .html_child.correct strong:after, .step-content .xblock-light-child .html_child.incorrect strong:after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 50%;
+    background: #29CB97;
+    width: 40px;
+    height: 40px;
+    content: "\f00c";
+    font: 27px/40px FontAwesome;
+    text-align: center;
+    color: white;
+    margin: -20px 0 0;
+}
+.step-content .xblock-light-child .html_child.incorrect strong:after {
+    background: #FF7A00;
+    content: "\f00d";
 }
