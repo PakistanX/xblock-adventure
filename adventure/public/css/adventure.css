@@ -277,3 +277,47 @@
     background: #FF7A00;
     content: "\f00d";
 }
+@media screen and (max-width: 700px) {
+    .adventure .step-body {
+        padding: 0 0 10px;
+    }
+    .adventure .choice-selector {
+        width: 25px;
+        height: 25px;
+        top: 14px;
+    }
+    .adventure .choice-label {
+        padding: 10px 50px 10px;
+        min-height: 51px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .adventure .choice-label:after {
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font: 18px/30px FontAwesome;
+        margin: -15px 0 0;
+    }
+    .navigation-next, .navigation-back {
+        height: 40px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .step-content .xblock-light-child .html_child.correct, .step-content .xblock-light-child .html_child.incorrect {
+        padding: 15px;
+    }
+    .step-content .xblock-light-child .html_child.correct strong, .step-content .xblock-light-child .html_child.incorrect strong {
+        font-size: 19px;
+        line-height: 30px;
+        padding: 5px 0 5px 35px;
+        margin: 0 0 5px;
+    }
+    .step-content .xblock-light-child .html_child.correct strong:after, .step-content .xblock-light-child .html_child.incorrect strong:after {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        margin-top: -15px;
+    }
+}
