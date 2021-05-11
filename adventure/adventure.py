@@ -64,8 +64,8 @@ DEFAULT_XML_CONTENT = textwrap.dedent("""\
       </html>
       <mcq type="choices">
         <question>What idea will you suggest?</question>
-        <choice value="last-correct">first option text</choice>
-        <choice value="second">second option text</choice>
+        <choice value="last-correct">Tell Mary about my great idea that matches her perception.</choice>
+        <choice value="second">Tell Mary about my other idea that doesn't match her perception.</choice>
       </mcq>
       <html name="last">
         <strong>FEEDBACK FIRST</strong>

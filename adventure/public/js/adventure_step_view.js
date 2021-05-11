@@ -59,7 +59,7 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
         $("input[type=radio]").map( function() {
             var nameValue = $(this).attr('value').replace("-correct", "")
             $("[data-type='HTMLBlock'] [name='"+ nameValue + "']").hide()
-            $(this).parent().parent().removeClass("checked correct incorrect")
+            $(this).parents(".choice").removeClass("checked correct incorrect")
         });
 
         // wrapping video and MCQs section in order to show feedback below MCQs options
@@ -83,7 +83,7 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
         $("input[type=radio]").map( function() {
             var nameValue = $(this).attr('value').replace("-correct", "")
             $("[data-type='HTMLBlock'] [name='"+ nameValue + "']").hide()
-            $(this).parent().parent().removeClass("checked correct incorrect")
+            $(this).parents(".choice").removeClass("checked correct incorrect")
         });
 
         var newClass = selected_choice.val().includes("-correct")? "correct": "incorrect";
@@ -91,7 +91,7 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
 
         feedbackText.show();
         feedbackText.addClass(newClass);
-        selected_choice.parent().parent().addClass("checked " + newClass)
+        selected_choice.parents(".choice").addClass("checked " + newClass)
 
         return data;
     },
