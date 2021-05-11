@@ -261,6 +261,7 @@ class AdventureBlock(CompletableXBlockMixin, XBlockWithLightChildren):
                     raise ValueError('All mcq must contain choices.')
                 for choice in choices:
                     value = choice.attrib.get('value', None)
+                    value = value and value.replace('-correct', '')  # to handle correct/incorrect MCQs/feedback
                     if value is None or value not in step_names:
                         raise ValueError('All mcq choice values must be a valid step name.')
 
