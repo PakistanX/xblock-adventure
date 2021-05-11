@@ -64,7 +64,7 @@ DEFAULT_XML_CONTENT = textwrap.dedent("""\
       </html>
       <mcq type="choices">
         <question>What idea will you suggest?</question>
-        <choice value="last">first option text</choice>
+        <choice value="last-correct">first option text</choice>
         <choice value="second">second option text</choice>
       </mcq>
       <html name="last">
@@ -88,7 +88,7 @@ DEFAULT_XML_CONTENT = textwrap.dedent("""\
       </html>
       <mcq type="choices">
         <question>What will you say next?</question>
-        <choice value="last">(a) Tell me what you think Bob's perception of the meeting was.</choice>
+        <choice value="last-correct">(a) Tell me what you think Bob's perception of the meeting was.</choice>
         <choice value="third">(b) I can understand how you thought that, but let's discuss what really 
         happened.</choice>
       </mcq>

@@ -57,8 +57,9 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
             $('[data-type="MCQBlock"]').addClass("hide").removeClass("show")
         }
         $("input[type=radio]").map( function() {
-            $("[data-type='HTMLBlock'] [name='"+ $(this).attr('value') + "']").hide()
-            $(this).parent().parent().removeClass("checked")
+            var nameValue = $(this).attr('value').replace("-correct", "")
+            $("[data-type='HTMLBlock'] [name='"+ nameValue + "']").hide()
+            $(this).parent().parent().removeClass("checked correct incorrect")
         });
 
         // wrapping video and MCQs section in order to show feedback below MCQs options
@@ -76,16 +77,21 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
         // Returns the selected choice
         var selected_choice = $('input[type=radio]:checked', this.ui.choices);
         if (selected_choice.length) {
-            data['choice'] = selected_choice.val();
+            data['choice'] = selected_choice.val().replace("-correct", "");
         };
 
         $("input[type=radio]").map( function() {
-            $("[data-type='HTMLBlock'] [name='"+ $(this).attr('value') + "']").hide()
-            $(this).parent().parent().removeClass("checked")
+            var nameValue = $(this).attr('value').replace("-correct", "")
+            $("[data-type='HTMLBlock'] [name='"+ nameValue + "']").hide()
+            $(this).parent().parent().removeClass("checked correct incorrect")
         });
 
-        $("[data-type='HTMLBlock'] [name='"+ selected_choice.val() +"']").show()
-        selected_choice.parent().parent().addClass("checked")
+        var newClass = selected_choice.val().includes("-correct")? "correct": "incorrect";
+        var feedbackText = $("[data-type='HTMLBlock'] [name='"+ data['choice'] +"']");
+
+        feedbackText.show();
+        feedbackText.addClass(newClass);
+        selected_choice.parent().parent().addClass("checked " + newClass)
 
         return data;
     },
