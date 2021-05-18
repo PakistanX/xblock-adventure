@@ -186,7 +186,7 @@
 .adventure-xblock-content {
     position: relative;
 }
-.None_2_1-info {
+.mcq-block {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -195,7 +195,7 @@
     padding: 20px 15px 0;
     margin: 0 !important;
 }
-.step-content .None_2_1-info .xblock-light-child {
+.step-content .mcq-block .xblock-light-child {
     margin: 0 auto;
     max-width: 600px;
     background: #F2F2F2;

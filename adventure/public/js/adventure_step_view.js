@@ -53,6 +53,7 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
                 $(".navigation-view").addClass("show").removeClass("hide")
                 $('[data-type="MCQBlock"]').addClass("show").removeClass("hide")
             });
+            $("[data-type='MCQBlock']").parent().addClass("mcq-block");
             $(".navigation-view").addClass("hide").removeClass("show")
             $('[data-type="MCQBlock"]').addClass("hide").removeClass("show")
         }
@@ -64,9 +65,8 @@ var AdventureStepView = Backbone.Marionette.LayoutView.extend({
 
         // wrapping video and MCQs section in order to show feedback below MCQs options
         $("[data-type='HTMLBlock'] [name='video']").
-          parent().
-          parent().
-          next('.step-child').
+          parents('.step-child').
+          siblings('.mcq-block').
           andSelf().
           wrapAll("<div class='wrapper-video' />")
     },
