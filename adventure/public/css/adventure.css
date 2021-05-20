@@ -1,3 +1,8 @@
+.adventure button[disabled] {
+    cursor: default;
+    opacity: .7;
+}
+
 .adventure .navigation-view {
     padding: 0 15px;
 }
@@ -44,6 +49,7 @@
     color: white;
     background: #DB232D;
 }
+
 .navigation-next, .navigation-back {
     height: 50px;
     font-weight: 700;
@@ -57,7 +63,7 @@
     background: #8BC5CB;
     outline: none !important;
     text-shadow: none;
-    margin: 0 0 10px;
+    margin: 0 20px 10px 0;
 }
 .navigation-next:hover, .navigation-back:hover {
     background: #8BC5CB !important;
@@ -111,7 +117,8 @@
 .adventure .choice-selector {
     position: absolute;
     left: 15px;
-    top: 20px;
+    top: 50%;
+    margin-top: -20px;
     width: 30px;
     height: 30px;
     border: 2px solid #C4C4C4;
@@ -284,7 +291,7 @@
     .adventure .choice-selector {
         width: 25px;
         height: 25px;
-        top: 14px;
+        margin-top: -12px;
     }
     .adventure .choice-label {
         padding: 10px 50px 10px;
