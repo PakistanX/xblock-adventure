@@ -26,7 +26,6 @@
 import logging
 import textwrap
 from io import StringIO
-from uuid import uuid4
 
 from lazy import lazy
 from lxml import etree
