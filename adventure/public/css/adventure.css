@@ -152,7 +152,7 @@
 }
 .adventure .choice-label {
     display: block;
-    padding: 18px 60px 18px;
+    padding: 18px 18px 18px 60px;
     min-height: 70px;
     font-size: 18px;
     line-height: 30px;
@@ -181,7 +181,7 @@
     border-color: #29CB97;
 }
 .adventure .choice.correct .choice-label:after {
-    display: block;
+    display: none;
 }
 .adventure .choice.incorrect .choice-label {
     border-color: #FF7A00;
@@ -189,7 +189,7 @@
 .adventure .choice.incorrect .choice-label:after {
     background: #FF7A00;
     content: "\f00d";
-    display: block;
+    display: none;
 }
 .hide {
     display: none;
@@ -327,7 +327,7 @@
         margin-top: -12px;
     }
     .adventure .choice-label {
-        padding: 10px 50px 10px;
+        padding: 10px 10px 10px 50px;
         min-height: 51px;
         font-size: 18px;
         line-height: 25px;
