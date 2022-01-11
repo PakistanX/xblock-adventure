@@ -1,5 +1,5 @@
 -e .
--e git://github.com/edx-solutions/xblock-mentoring.git@rebase-juniper#egg=xblock-mentoring==rebase-juniper
+-e git+https://github.com/edx-solutions/xblock-mentoring.git@rebase-juniper#egg=xblock-mentoring==rebase-juniper
 -e git+https://github.com/edx-solutions/xblock-ooyala.git@rebase-juniper#egg=xblock-ooyala==rebase-juniper
 edx-i18n-tools==0.5.3
 lazy==1.4
