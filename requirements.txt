@@ -1,4 +1,6 @@
 -e .
+-e git+https://github.com/PakistanX/xblock-mentoring.git@rebase-juniper#egg=xblock-mentoring
+-e git+https://github.com/PakistanX/xblock-ooyala.git@rebase-juniper#egg=xblock-ooyala
 edx-i18n-tools==0.5.3
 lazy==1.4
 lxml==4.5.2
